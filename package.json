@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-android-download",
+  "version": "1.0.0",
+  "description": "Cordova download",
+  "cordova": {
+    "id": "cordova-plugin-android-download",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Emil Balint",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/embalint/cordova-download-plugin.git"
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-android-download" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaAndroidMediaStore</name>
+    <description>Provides a method to download a file</description>
+    <license>MIT</license>
+    <keywords>cordova,android,download,video</keywords>
+    <js-module name="CordovaAndroidDownload" src="www/CordovaAndroidDownloadExc.js">
+        <clobbers target="CordovaAndroidDownload" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaAndroidMediaStore">
+                <param name="android-package" value="com.hc.CordovaAndroidDownload" />
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/CordovaAndroidDownload.java" target-dir="src/hc/CordovaAndroidMediaStore" />
+    </platform>
+</plugin>
